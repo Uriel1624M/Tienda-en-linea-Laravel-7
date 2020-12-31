@@ -9,7 +9,7 @@
 		<hr>
 		<div class="row">
 
-			<div class="col-md-6">
+			<div class="col-lg-6 col-md-6 mb-4">
 				<div class="product-block">
 					
 			      <img class="img1" src="{{ asset("storage/$articulo->url_imagen" )}}" width="300">
@@ -19,7 +19,7 @@
 
 			</div>
 
-			<div class="col-md-6 ">
+			<div class="col-lg-6 col-md-6 mb-4">
 				<div class="product-block">
 
 				{!! Form::open(['route'=>'cart-add', 'method'=>'GET', 'role' => 'form'])!!}

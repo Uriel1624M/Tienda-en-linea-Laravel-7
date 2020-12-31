@@ -11,7 +11,7 @@
     <div class="row">
 
     <!-- /.col-lg-3 -->
-      <div class="col-lg-3">
+      <div class="col-lg-3 col-md-12">
 
 	        <h1 class="my-4">Categorias</h1>
 	       <li class="list-group-item">
@@ -23,6 +23,7 @@
 			    @endforeach
 		    </li>
       </div>
+      <hr>
       <!-- /.col-lg-3 -->
 
       <!-- /.col-lg-9 -->
@@ -34,7 +35,7 @@
 
         		@if($articulos->isNotEmpty())
         		@foreach($articulos as $item)
-        		<div class="col-lg-4 col-md-6 mb-4">
+        		<div class="col-lg-4 col-md-12 mb-4">
 			            <div class="card h-100 ">
 			              <a href="#"><img class="card-img-top" src="{{ asset("storage/$item->url_imagen" )}}" alt=""></a>
 			              <div class="card-body">
