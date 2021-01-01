@@ -25,7 +25,7 @@ $(document).ready(function(){
 					var fila="<tr> ";
 					fila+="<td><img src='../storage/"+data[i].articulo.url_imagen+"' width='30'></img></td>";
 					fila+="<td>"+data[i].articulo.nombre+"</td>";
-					fila+="<td>"+data[i].id_talla+"</td>";
+					fila+="<td>"+data[i].talla.talla+"</td>";
 					fila+="<td>"+parseFloat(data[i].articulo.precio).toFixed(2)+"</td>";
 					fila+="<td>"+parseInt(data[i].quantity)+"</td>";
 					fila+="<td>"+(parseFloat(data[i].quantity)* parseFloat(data[i].precio)).toFixed(2) +"</td>";

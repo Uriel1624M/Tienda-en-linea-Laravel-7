@@ -52,8 +52,9 @@ class OrderController extends Controller
 
 
     public function getItems(Request $request){
+        //hacemos uso de las funciones del modelo
+    	$items=OrderItem::with('articulo')->with('talla')->where('order_id',$request->get('order_id'))->get();
 
-    	$items=OrderItem::with('articulo')->where('order_id',$request->get('order_id'))->get();
     	return json_encode($items);
 
     }
@@ -63,7 +64,7 @@ class OrderController extends Controller
          $order=Order::find($id);
         $order->delete();
 
-        $message= $order ? 'Categoria Eliminada correctamente':'Error al eliminar ';
+        $message= $order ? 'Orden Eliminada correctamente':'Error al eliminar ';
 
     return redirect()->route('orders.index')->with('message',$message);
 

@@ -70,8 +70,8 @@ class ArticulotallaController extends Controller
         $articulotalla->stock=$request->get('stock');
         $update=$articulotalla->save();
 
-        $message= $update ? 'Stock Actualizada correctamente':'Error al actualizar ';
-        return redirect()->route('marcas.index')->with('message',$message);            
+        $message= $update ? 'Se ha actualizado el stock correctamente':'Error al actualizar ';
+        return redirect()->route('articulotalla.index')->with('message',$message);            
 
     }
 

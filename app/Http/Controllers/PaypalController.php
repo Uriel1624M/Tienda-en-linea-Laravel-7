@@ -227,7 +227,7 @@ class PaypalController extends Controller
     private function printInvoice($carrito) {
         $invoice = \ConsoleTVs\Invoices\Classes\Invoice::make('Factura');
         foreach($carrito as $producto) {
-            $invoice = $invoice->addItem($producto['nombre'], $producto['precio'], $producto['quantity'], $producto['cod']);
+            $invoice = $invoice->addItem($producto['nombre']." ".$producto['talla'], $producto['precio'], $producto['quantity'], $producto['sku']);
         }
 
         $destinationPath = '/public/invoices/'."Orden-".$this->number." ".Auth::user()->name." ".Auth::user()->last_name.'.pdf';

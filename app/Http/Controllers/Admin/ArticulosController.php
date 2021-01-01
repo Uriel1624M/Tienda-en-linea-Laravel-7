@@ -88,23 +88,13 @@ class ArticulosController extends Controller
 
         $id_articulo= Articulo::all()->sortBy('id', SORT_NATURAL | SORT_FLAG_CASE)->pluck( 'id');
 
-           //$tallas_ids=$request->tallas;
-
-                    // foreach($tallas_ids as $id){
-
-                    //     $articulotalla=Articulotalla::create([
-                    //     'id_articulo'=>$id_articulo->last(),
-                    //     'id_talla'=>$id,
-                    //     'stock'=>'0'
 
 
-                    // ]);
-                    // }
-            $idtalla=$request->get('idtalla');
-            $cantidad=$request->get('cantidad');
-            $contador=0;
+        $idtalla=$request->get('idtalla');
+        $cantidad=$request->get('cantidad');
+        $contador=0;
 
-     if ($request->get('idtalla')!="") {
+        if ($request->get('idtalla')!="") {
 
             while($contador <count($idtalla))
                 {
@@ -223,14 +213,7 @@ class ArticulosController extends Controller
           
         }
             
-        // $articulotalla=Articulotalla::where('id_articulo',$id)
-        //                             -> where('id_talla',$request->id_talla)->
-        //                             first();
-        //                            // dd($articulotalla);
-
-        // $articulotalla->stock=$request->get('stock');
-        // $articulotalla->save();
-
+    
 
         $message= $update ? 'Articulo Actualizado correctamente':'Error al actulizar ';
         return redirect()->route('articulos.index')->with('message',$message);    

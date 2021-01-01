@@ -23,4 +23,7 @@ class OrderItem extends Model
     public function articulo(){
         return $this->belongsTo('App\Articulo','articulo_id','id');
     }
+    public function talla(){
+        return $this->belongsTo('App\Talla','id_talla','id');
+    }
 }
