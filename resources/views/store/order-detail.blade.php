@@ -12,7 +12,7 @@
 					<tr><td>Nombre</td><td>{{Auth::user()->name}}</td></tr>
 					<tr><td>Apellido :</td><td>{{Auth::user()->last_name}}</td></tr>
 					<tr><td>Email :</td><td>{{Auth::user()->email}}</td></tr>
-					<tr><td>Dirreccion :</td><td>{{Auth::user()->address}}</td></tr>
+					<tr><td>Direccion :</td><td>{{Auth::user()->address}}</td></tr>
 
 				</table>
 

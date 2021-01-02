@@ -55,7 +55,7 @@
 				<div class="panel">
 					<i class="fa fa-bar-chart icon-home"></i>
 					<a href="{{route('estadisticas.index')}}" class="btn btn-warning btn-block btn-home-admin">
-						GRaficas
+						Graficas
 					</a>
 				</div>
 			</div>

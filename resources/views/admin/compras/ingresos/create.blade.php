@@ -26,7 +26,8 @@
 									{!! Form::label('id_proveedor', 'Proveedor :', array('class' => 'subrayado')) !!} 
 					
 									{!!
-								     	Form::select('id_proveedor', $proveedores, null, array('class'=>'form-control', 'placeholder'=>'Selecciona el proveedor'))
+								     	Form::select('id_proveedor', $proveedores, null, array('class'=>'form-control', 'placeholder'=>'Selecciona el proveedor',
+								     	'required'=>'required',))
 								    !!}
 									
 								</div>
@@ -43,7 +44,9 @@
 								     	Form::select('tipo_comprobante',
 								     	['Boleta' => 'Boleta','Factura'=>'Factura','tiket'=>'tiket','Nota'=>'Nota']
 										, null, 
-										array('class'=>'form-control', 'placeholder'=>'Seleciona tipo Comprobante'))
+										array('class'=>'form-control', 
+										'required'=>'required',
+										'placeholder'=>'Seleciona tipo Comprobante'))
 								   	!!}
 									
 									
@@ -87,7 +90,8 @@
 
 						<fieldset class="border p-2">
 							<div class="form-group">
-	   								<legend  class="w-auto">Your Legend</legend>
+	   								<legend  class="w-auto">Articulos</legend>
+	   								<hr>
 	   								<div class="row">
 		   								<div class="col-md-3">
 		   									{!!
@@ -117,7 +121,8 @@
 											 {!! Form::number('cantidad', null, 
 											 				array('class'=>'form-control',
 														           'placeholder'=>'',
-														           'autofocus'=>'autofocus'
+														           'autofocus'=>'autofocus',
+														           'min'=>'1'
 														        )
 														    ) 
 					                	      !!}
@@ -194,11 +199,13 @@
 						</fieldset>
 
 						<div class="form-group">
-							<div id="guardar">
-								{!!Form::submit('Guardar',array('class'=>' btn btn-success'))!!}
-							</div>
+							<div class="d-flex mx-2">
+								<a  href="{{route('ingresos.index')}}" class="btn btn-warning"> Cancelar</a>
 
-							<a  href="{{route('ingresos.index')}}" class="btn btn-warning"> Cancelar</a>
+								<div id="guardar">
+									{!!Form::submit('Guardar',array('class'=>' btn btn-success'))!!}
+								</div>
+						  </div>
 						</div>
 
 					{!!Form::close()!!}

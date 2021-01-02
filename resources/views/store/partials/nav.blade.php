@@ -60,7 +60,7 @@
             <li class="nav-item dropdown show">
 
               <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="true">
-                   <img src="{{Auth::user()->url_imagen}}" alt="" width="25px" height="25px"> {{ Auth::user()->name ." ".Auth::user()->last_name}}
+                   <img src="{{ url(Auth::user()->url_imagen) }}" alt="" width="25px" height="25px"> {{ Auth::user()->name ." ".Auth::user()->last_name}}
               </a>
       
               <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute;will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 40px, 0px);">

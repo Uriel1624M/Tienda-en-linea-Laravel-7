@@ -13,12 +13,12 @@
     <!-- /.col-lg-3 -->
       <div class="col-lg-3 col-md-12">
 
-	        <h1 class="my-4">Categorias</h1>
-	       <li class="list-group-item">
+	        <h2 class="my-4">Categorias</h2>
+	       <li class="list-group">
 
 		        @foreach ($categorias as $cat)
-			        <a href="/?categoria={{ $cat->id }}" class="list-group-item list-group-item-action list-group-item-primary" role="tab">
-			                     <span class="relative">{{ $cat->nombre }}</span>
+			        <a href="/?categoria={{ $cat->id }}" class="list-group-item list-group-item-action" role="tab">
+			           <span class="relative">{{ $cat->nombre }}</span>
 			        </a>
 			    @endforeach
 		    </li>

@@ -41,7 +41,7 @@
 							</td>
 							<td> 
 								
-								{!! Form::open(['route'=>['tallas.destroy',$item->id]])!!}
+								{!! Form::open(['route'=>['users.destroy',$item->id]])!!}
                                    <input type="hidden" name="_method" value="DELETE">
                                    
                                    <button onclick="return confirm('Esta Seguro que desea Eliminar el Usuario?')" class="btn btn-danger">

@@ -5,7 +5,7 @@
 
 	<div class="page-header">
 			<h1>
-			 <i class="fa fa-users"></i>	Estadisticas
+			 <i class="fa fa-bar-chart"></i>	Estadisticas
 				
 			</h1>
 

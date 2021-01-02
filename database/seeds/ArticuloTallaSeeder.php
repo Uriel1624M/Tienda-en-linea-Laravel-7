@@ -27,7 +27,7 @@ class ArticuloTallaSeeder extends Seeder
             'stock' => '1',
 
        		 ],[
-            'sku' => 'md-s112',
+            'sku' => 'md-s11267',
          	  'id_articulo' => '2',
             'id_talla' => '2',
             'stock' => '1',
