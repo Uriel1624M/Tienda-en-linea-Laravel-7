@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark fixed-top">
+<nav class="navbar navbar-expand-lg  navbar-dark bg-dark fixed-top">
     <a class="navbar-brand" href="#">Store Laravel</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
